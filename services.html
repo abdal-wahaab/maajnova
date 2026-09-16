@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services — Maajnova</title>
+<meta name="description" content="Custom software, AI automation, business systems, healthcare platforms, hardware and training — built end to end by Maajnova, Nairobi." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="maajnova.css?v=53">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader" class="preloader" aria-hidden="true">
+  <div class="pl-inner">
+    <div class="pl-brand"><span>M</span><span>A</span><span>A</span><span>J</span><span>N</span><span>O</span><span>V</span><span>A</span></div>
+    <div class="pl-tag">/ Technology Tailored For You /</div>
+  </div>
+</div>
+
+<header id="hdr">
+  <div class="wrap">
+    <div class="nav">
+      <a href="index.html" class="brand">Maajnova</a>
+      <nav class="nav-links">
+        <a href="services.html" class="active">Services</a>
+        <a href="maajhealth.html">Maaj Health</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-right">
+        <button class="btn btn-primary" data-open-modal>Get in touch</button>
+        <button class="burger" id="burger" aria-label="Menu"><i data-lucide="menu"></i></button>
+      </div>
+    </div>
+    <div class="mobile-menu glass" id="mobileMenu">
+      <a href="services.html">Services</a><a href="maajhealth.html">Maaj Health</a><a href="about.html">About</a>
+      <button class="btn btn-primary" data-open-modal style="margin-top:8px">Get in touch</button>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="svc-hero">
+  <div class="wrap">
+    <span class="svc-eyebrow">What we do <span class="ln"></span></span>
+    <h1>We build the system your business runs on.</h1>
+    <p>The software, the hardware to run it and the training to own it — designed end to end by one senior team, and delivered as a single package.</p>
+    <div class="svc-tags"><span><b>01</b> Systems</span><span><b>02</b> Hardware</span><span><b>03</b> Training</span></div>
+  </div>
+</section>
+
+<!-- THREE PILLARS -->
+<section class="wrap sec" style="padding:96px 24px 40px">
+  <div class="pillars-head" data-reveal>
+    <span class="eyebrow">Three pillars, one team</span>
+    <h2>What we actually do.</h2>
+  </div>
+
+  <div class="pillar" id="systems" data-reveal style="background-image:url('https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1400&auto=format&fit=crop')">
+    <div class="p-body">
+      <div class="p-num">01</div>
+      <span class="p-kicker">The core</span>
+      <h3>Systems</h3>
+      <p>Software shaped around how you actually work — with AI and automation engineered straight in.</p>
+      <div class="p-chips"><span>Websites</span><span>Web &amp; mobile apps</span><span>CRMs &amp; dashboards</span><span>AI &amp; automation</span><span>Healthcare platforms</span><span>Real-time reporting</span></div>
+    </div>
+  </div>
+
+  <div class="pillar" id="hardware" data-reveal style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1400&auto=format&fit=crop')">
+    <div class="p-body">
+      <div class="p-num">02</div>
+      <span class="p-kicker">On the ground</span>
+      <h3>Hardware</h3>
+      <p>The devices and infrastructure your system runs on — sourced, supplied and set up wherever you operate.</p>
+      <div class="p-chips"><span>Devices &amp; infrastructure</span><span>Sourcing &amp; supply</span><span>On-site setup</span><span>Integration</span><span>Delivery</span><span>Maintenance</span></div>
+    </div>
+  </div>
+
+  <div class="pillar" id="training" data-reveal style="background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1400&auto=format&fit=crop')">
+    <div class="p-body">
+      <div class="p-num">03</div>
+      <span class="p-kicker">Made to last</span>
+      <h3>Training</h3>
+      <p>We hand over more than a login — the strategy, training and docs to own the system long after launch.</p>
+      <div class="p-chips"><span>Tech &amp; business strategy</span><span>Team training</span><span>Admin &amp; power-user</span><span>Docs &amp; onboarding</span><span>Ongoing support</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FULL PACKAGE -->
+<section class="band band-tint" id="package">
+ <div class="wrap sec">
+  <div class="pkg-head" data-reveal>
+    <div class="pkg-intro">
+      <span class="eyebrow pkg-eyebrow">The Maajnova way <span class="ln"></span></span>
+      <h2>One partner.<br>Everything you need.</h2>
+      <p>We bring strategy, software, hardware and training together so your business runs better — with one team you can reach, and one partner you can trust.</p>
+    </div>
+    <div class="pkg-hub">
+      <svg class="hub-svg" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+        <g stroke="#b8d8d0" stroke-width="1.5">
+          <circle cx="200" cy="200" r="150" stroke-dasharray="2 8"/>
+          <circle cx="200" cy="200" r="80" stroke-dasharray="2 8"/>
+          <line x1="200" y1="70" x2="200" y2="330" stroke-dasharray="2 8"/>
+          <line x1="70" y1="200" x2="330" y2="200" stroke-dasharray="2 8"/>
+        </g>
+      </svg>
+      <div class="hub-node n-top rl"><div class="ic"><i data-lucide="box" style="width:24px"></i></div><span class="lb">SYSTEMS</span></div>
+      <div class="hub-node n-right rl"><div class="ic"><i data-lucide="cpu" style="width:24px"></i></div><span class="lb">HARDWARE</span></div>
+      <div class="hub-node n-bottom rl"><div class="ic"><i data-lucide="graduation-cap" style="width:24px"></i></div><span class="lb">TRAINING</span></div>
+      <div class="hub-node n-left ll"><div class="ic"><i data-lucide="monitor" style="width:24px"></i></div><span class="lb">WEBSITES</span></div>
+      <div class="hub-center"><span>M</span></div>
+    </div>
+  </div>
+
+  <div class="pkg-grid" data-reveal>
+    <article class="pkg">
+      <div class="num">01</div>
+      <div class="pkg-media"><i data-lucide="monitor"></i></div>
+      <h3>Websites</h3>
+      <p>Fast, high-converting websites that build trust and turn visitors into customers.</p>
+      <ul class="pkg-feats">
+        <li><i data-lucide="check"></i> Conversion-focused design</li>
+        <li><i data-lucide="check"></i> Mobile-first &amp; fast</li>
+        <li><i data-lucide="check"></i> SEO &amp; analytics built in</li>
+      </ul>
+      <a class="more" href="#systems">Learn more <i data-lucide="arrow-right"></i></a>
+    </article>
+    <article class="pkg">
+      <div class="num">02</div>
+      <div class="pkg-media"><i data-lucide="layers"></i></div>
+      <h3>Systems</h3>
+      <p>Custom platforms with AI and automation built around your workflow.</p>
+      <ul class="pkg-feats">
+        <li><i data-lucide="check"></i> AI &amp; automation built in</li>
+        <li><i data-lucide="check"></i> CRMs &amp; dashboards</li>
+        <li><i data-lucide="check"></i> Web &amp; mobile apps</li>
+      </ul>
+      <a class="more" href="#systems">Learn more <i data-lucide="arrow-right"></i></a>
+    </article>
+    <article class="pkg">
+      <div class="num">03</div>
+      <div class="pkg-media"><i data-lucide="server"></i></div>
+      <h3>Hardware</h3>
+      <p>The right devices, expertly configured and installed wherever you are.</p>
+      <ul class="pkg-feats">
+        <li><i data-lucide="check"></i> Sourcing &amp; supply</li>
+        <li><i data-lucide="check"></i> On-site setup</li>
+        <li><i data-lucide="check"></i> Ongoing maintenance</li>
+      </ul>
+      <a class="more" href="#hardware">Learn more <i data-lucide="arrow-right"></i></a>
+    </article>
+    <article class="pkg">
+      <div class="num">04</div>
+      <div class="pkg-media"><i data-lucide="graduation-cap"></i></div>
+      <h3>Training</h3>
+      <p>Hands-on training that empowers your team and drives long-term results.</p>
+      <ul class="pkg-feats">
+        <li><i data-lucide="check"></i> Hands-on team training</li>
+        <li><i data-lucide="check"></i> Docs &amp; onboarding</li>
+        <li><i data-lucide="check"></i> Ongoing support</li>
+      </ul>
+      <a class="more" href="#training">Learn more <i data-lucide="arrow-right"></i></a>
+    </article>
+  </div>
+
+  <div class="pkg-strip" data-reveal>
+    <div class="vs"><i data-lucide="users"></i><div><b>All-in-one solution</b><span>Built to work together.</span></div></div>
+    <div class="vs"><i data-lucide="shield-check"></i><div><b>One senior team</b><span>You can actually reach.</span></div></div>
+    <div class="vs"><i data-lucide="clock"></i><div><b>End-to-end delivery</b><span>From start to scale.</span></div></div>
+    <div class="vs"><i data-lucide="headphones"></i><div><b>Long-term support</b><span>We stay with you.</span></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- CTA -->
+<section class="wrap sec" style="padding:20px 24px 90px">
+  <div class="cta-band" data-reveal>
+    <h2>Not sure which one you need?</h2>
+    <p>Tell us the problem, not the solution. We'll map the highest-ROI path in a free 30-minute call.</p>
+    <button class="btn btn-white" data-open-modal>Get in touch <i data-lucide="arrow-up-right" style="width:18px"></i></button>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand-col">
+        <a href="index.html" class="brand">Maajnova</a>
+        <p>AI automation, CRM systems, WhatsApp bots and custom software — built end to end for African businesses, from Nairobi.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px"></i></a>
+          <a href="#" aria-label="X"><i data-lucide="twitter" style="width:18px"></i></a>
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:18px"></i></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#software">Custom Software &amp; Apps</a></li>
+          <li><a href="services.html#ai">AI &amp; Automation</a></li>
+          <li><a href="services.html#business">Business Systems</a></li>
+          <li><a href="services.html#healthcare">Healthcare Systems</a></li>
+          <li><a href="services.html#training">Consulting &amp; Training</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="maajhealth.html">Maaj Health</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="about.html#team">Team</a></li>
+          <li><a href="#" data-open-modal>Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-contact">
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:info@maajnova.com"><i data-lucide="mail" style="width:16px"></i> info@maajnova.com</a></li>
+          <li><a href="tel:+254712602273"><i data-lucide="phone" style="width:16px"></i> +254 712 602273</a></li>
+          <li><a href="https://wa.me/254712602273" target="_blank" rel="noopener"><i data-lucide="message-circle" style="width:16px"></i> WhatsApp us</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Zawiya+Apartments+South+C+Nairobi" target="_blank" rel="noopener"><i data-lucide="map-pin" style="width:16px"></i> Zawiya Apartments, South C, Nairobi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Maajnova. Built in Nairobi, Kenya.</span>
+      <span>/ Technology Tailored For You /</span>
+    </div>
+  </div>
+</footer>
+
+<!-- CONTACT MODAL -->
+<div class="modal" id="modal">
+  <div class="panel">
+    <button class="close" id="modalClose" aria-label="Close"><i data-lucide="x"></i></button>
+    <div id="formView">
+      <h3>Let's talk.</h3>
+      <p class="sub">Tell us what you'd like to build — we reply within one business day.</p>
+      <form id="contactForm" novalidate>
+        <div class="field"><label>Name</label><input name="name" type="text" placeholder="Your name"><div class="err">Please enter your name.</div></div>
+        <div class="field"><label>Email</label><input name="email" type="email" placeholder="you@company.com"><div class="err">Please enter a valid email.</div></div>
+        <div class="field"><label>What do you want to build?</label><textarea name="msg" rows="3" placeholder="e.g. a booking system, a WhatsApp bot, a hospital platform…"></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send message</button>
+      </form>
+      <div class="modal-contact">
+        <a href="mailto:info@maajnova.com"><i data-lucide="mail" style="width:15px"></i> info@maajnova.com</a>
+        <a href="tel:+254712602273"><i data-lucide="phone" style="width:15px"></i> +254 712 602273</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Zawiya+Apartments+South+C+Nairobi" target="_blank" rel="noopener"><i data-lucide="map-pin" style="width:15px"></i> Zawiya Apartments, South C, Nairobi</a>
+      </div>
+    </div>
+    <div id="successView" class="success" style="display:none">
+      <div class="check"><i data-lucide="check" style="width:30px;height:30px"></i></div>
+      <h3>Message sent!</h3>
+      <p class="sub">Thanks — we'll be in touch within a business day.</p>
+      <button class="btn btn-glass" style="background:var(--teal-100);color:var(--teal-700)" id="successClose">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp quick-contact (mobile) -->
+<a class="wa-fab" href="https://wa.me/254712602273" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <i data-lucide="message-circle"></i>
+</a>
+
+<script src="maajnova.js?v=14"></script>
+</body>
+</html>

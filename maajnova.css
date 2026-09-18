@@ -591,33 +591,51 @@ header.scrolled .burger{color:var(--ink)}
 .po-photo.t4{background:linear-gradient(160deg,#e0f0eb,#d0e9e2)}
 @media(max-width:900px){.poly{flex-wrap:wrap;gap:24px}.po{transform:none!important;width:230px}}
 
-/* ---------- DISCIPLINES (expanding panel strip) ---------- */
-.disc-strip{display:flex;gap:12px;height:440px;text-align:left}
-.disc{position:relative;flex:1 1 0;min-width:0;border-radius:18px;overflow:hidden;
-  background-size:cover;background-position:center;display:flex;align-items:flex-end;
-  box-shadow:0 26px 50px -26px rgba(16,48,43,.42);
-  transition:flex-grow .55s var(--ease),box-shadow .45s}
-.disc:before{content:"";position:absolute;inset:0;z-index:0;transition:background .5s ease;
-  background:linear-gradient(180deg,rgba(9,58,52,.44) 0%,rgba(6,38,34,.52) 46%,rgba(4,26,22,.93) 100%)}
-.disc:hover{flex-grow:2.6;box-shadow:0 34px 62px -22px rgba(16,48,43,.52)}
-.disc:hover:before{background:linear-gradient(180deg,rgba(9,58,52,.16) 0%,rgba(6,38,34,.40) 50%,rgba(4,24,20,.9) 100%)}
-.disc-in{position:relative;z-index:1;padding:26px 24px;color:#fff;width:100%}
-.disc-n{display:block;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--mint);margin-bottom:8px}
-.disc h3{font-family:var(--serif);font-size:23px;font-weight:600;color:#fff;line-height:1.1}
-.disc-in p{margin-top:10px;max-width:34ch;color:rgba(255,255,255,.86);font-size:13.5px;line-height:1.55;
-  opacity:0;max-height:0;overflow:hidden;transition:opacity .45s ease,max-height .55s ease}
-.disc:hover .disc-in p{opacity:1;max-height:110px}
-.disc .disc-hint{position:absolute;top:16px;right:16px;z-index:1;width:26px;height:26px;border-radius:50%;
-  display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#fff;
-  opacity:.85;transition:opacity .4s,transform .4s}
-.disc:hover .disc-hint{opacity:0;transform:scale(.7)}
-.disc .disc-hint svg{width:14px;height:14px}
-@media(max-width:760px){
-  .disc-strip{flex-direction:column;height:auto}
-  .disc{flex:none;height:188px}
-  .disc:before{background:linear-gradient(180deg,rgba(9,58,52,.20),rgba(4,24,20,.92))}
-  .disc-in p{opacity:1;max-height:none;margin-top:8px}
-  .disc .disc-hint{display:none}
+/* ---------- DISCIPLINES EXPLORER (interactive) ---------- */
+.dx{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:stretch;max-width:1000px;margin:0 auto}
+.dx-tabs{display:flex;flex-direction:column;gap:8px}
+.dx-tab{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;
+  background:#fff;border:1px solid #e6f0ed;border-radius:14px;padding:18px 20px;color:var(--ink);position:relative;overflow:hidden;
+  transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.dx-tab b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:16px;color:var(--teal-300);flex:none}
+.dx-tab span{font-family:var(--serif);font-size:20px;font-weight:600;line-height:1.1}
+.dx-tab:before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:3px;border-radius:4px;background:var(--mint);
+  transform:scaleY(0);transition:transform .35s var(--ease)}
+.dx-tab:hover{transform:translateX(3px)}
+.dx-tab.is-active{border-color:var(--teal-100);box-shadow:0 18px 40px -24px rgba(16,48,43,.42)}
+.dx-tab.is-active:before{transform:scaleY(1)}
+.dx-tab.is-active b{color:var(--teal)}
+/* stage */
+.dx-stage{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid var(--teal-100);
+  background:#fff;box-shadow:0 30px 62px -30px rgba(16,48,43,.45);min-height:470px}
+.dx-figure{position:relative;flex:1;min-height:300px;background:#0a2521;overflow:hidden}
+.dx-img{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.06);
+  transition:opacity .7s ease,transform 1.8s var(--ease)}
+.dx-img:after{content:"";position:absolute;inset:0;background:linear-gradient(150deg,rgba(24,116,105,.32),rgba(9,48,43,.24))}
+.dx-img.is-active{opacity:1;transform:scale(1)}
+.dx-badge{position:absolute;top:16px;left:16px;z-index:2;display:inline-flex;align-items:center;gap:7px;
+  font-size:11.5px;font-weight:700;letter-spacing:.02em;color:#fff;background:rgba(6,38,34,.42);
+  border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px);padding:7px 13px;border-radius:100px}
+.dx-badge svg{color:var(--mint)}
+.dx-caption{padding:24px 26px 26px;position:relative;min-height:150px}
+.dx-cap{display:none}
+.dx-cap.is-active{display:block;animation:dxFade .5s ease}
+@keyframes dxFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.dx-cap h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:8px}
+.dx-cap p{color:var(--muted);font-size:14.5px;line-height:1.62;max-width:56ch}
+.dx-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.dx-tags span{font-size:11.5px;font-weight:600;color:var(--teal-700);background:rgba(24,116,105,.06);
+  border:1px solid var(--teal-100);padding:7px 13px;border-radius:100px}
+@media(max-width:820px){
+  .dx{grid-template-columns:1fr;gap:16px}
+  .dx-tabs{flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:4px}
+  .dx-tab{flex:0 0 auto;padding:12px 16px 12px 18px}
+  .dx-tab span{font-size:16px}
+  .dx-tab:before{top:auto;bottom:0;left:12px;right:12px;width:auto;height:3px;transform:scaleX(0)}
+  .dx-tab.is-active:before{transform:scaleX(1)}
+  .dx-stage{min-height:0}
+  .dx-figure{min-height:200px}
+  .dx-caption{min-height:0}
 }
 
 /* ---------- CTA ---------- */

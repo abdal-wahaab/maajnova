@@ -87,6 +87,25 @@
     counters.forEach(el => isStatic ? (el.textContent = el.dataset.count + (el.dataset.suffix || '')) : cio.observe(el));
   }
 
+  // disciplines explorer — tab list drives the stage; auto-cycles, pauses on interaction
+  const dx = document.querySelector('.dx');
+  if (dx) {
+    const tabs = [].slice.call(dx.querySelectorAll('.dx-tab'));
+    const imgs = [].slice.call(dx.querySelectorAll('.dx-img'));
+    const caps = [].slice.call(dx.querySelectorAll('.dx-cap'));
+    const n = tabs.length; let cur = 0, timer = null;
+    const setActive = (arr, i) => arr.forEach((el, k) => el.classList.toggle('is-active', k === i));
+    const show = (i) => { cur = i; setActive(tabs, i); setActive(imgs, i); setActive(caps, i); };
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+    const play = () => { stop(); if (!reduce) timer = setInterval(() => show((cur + 1) % n), 4800); };
+    tabs.forEach((t, k) => {
+      t.addEventListener('click', () => { show(k); play(); });
+      t.addEventListener('mouseenter', () => { show(k); stop(); });
+    });
+    dx.addEventListener('mouseleave', play);
+    show(0); play();
+  }
+
   // modal
   const modal = document.getElementById('modal');
   if (modal) {

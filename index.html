@@ -11,7 +11,7 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<link rel="stylesheet" href="maajnova.css?v=55">
+<link rel="stylesheet" href="maajnova.css?v=56">
 </head>
 <body>
 
@@ -261,29 +261,34 @@
 
 <!-- TEAM — founders -->
 <section class="band founders" id="team">
- <div class="wrap sec center">
+ <div class="wrap sec">
   <div class="sec-head" data-reveal>
     <span class="eyebrow">The studio</span>
     <h2>One senior team, four disciplines.</h2>
     <p>No handoffs, no juniors — the people who scope your project are the same ones who build it, across four core disciplines, from Nairobi.</p>
   </div>
-  <div class="disc-strip" data-reveal>
-    <article class="disc" style="background-image:url('https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=800&auto=format&fit=crop')">
-      <span class="disc-hint"><i data-lucide="chevrons-left-right"></i></span>
-      <div class="disc-in"><span class="disc-n">01</span><h3>Engineering</h3><p>System architecture and clean, reliable code — from first build to launch.</p></div>
-    </article>
-    <article class="disc" style="background-image:url('https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop')">
-      <span class="disc-hint"><i data-lucide="chevrons-left-right"></i></span>
-      <div class="disc-in"><span class="disc-n">02</span><h3>Design</h3><p>Interfaces shaped around how people actually work — not how software usually does.</p></div>
-    </article>
-    <article class="disc" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop')">
-      <span class="disc-hint"><i data-lucide="chevrons-left-right"></i></span>
-      <div class="disc-in"><span class="disc-n">03</span><h3>Operations</h3><p>Delivery, timelines and process — so projects ship and stay on track.</p></div>
-    </article>
-    <article class="disc" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop')">
-      <span class="disc-hint"><i data-lucide="chevrons-left-right"></i></span>
-      <div class="disc-in"><span class="disc-n">04</span><h3>Finance &amp; Analytics</h3><p>The numbers and the data that keep the studio sharp and sustainable.</p></div>
-    </article>
+  <div class="dx" data-reveal>
+    <div class="dx-tabs" role="tablist">
+      <button class="dx-tab is-active" data-i="0" type="button"><b>01</b><span>Engineering</span></button>
+      <button class="dx-tab" data-i="1" type="button"><b>02</b><span>Design</span></button>
+      <button class="dx-tab" data-i="2" type="button"><b>03</b><span>Operations</span></button>
+      <button class="dx-tab" data-i="3" type="button"><b>04</b><span>Finance &amp; Analytics</span></button>
+    </div>
+    <div class="dx-stage">
+      <div class="dx-figure">
+        <div class="dx-img is-active" style="background-image:url('https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1000&auto=format&fit=crop')"></div>
+        <div class="dx-img" style="background-image:url('https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop')"></div>
+        <div class="dx-img" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop')"></div>
+        <div class="dx-img" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop')"></div>
+        <span class="dx-badge"><i data-lucide="sparkles" style="width:13px"></i> The team behind it</span>
+      </div>
+      <div class="dx-caption">
+        <div class="dx-cap is-active"><h3>Engineering</h3><p>We design the architecture and write the code — web and mobile apps, APIs and the automation that ties them together. Built to be reliable, secure and easy to grow.</p><div class="dx-tags"><span>Architecture</span><span>Web &amp; mobile</span><span>APIs</span><span>Automation</span></div></div>
+        <div class="dx-cap"><h3>Design</h3><p>We shape the interfaces and flows around how your people actually work — clear, fast and genuinely usable, not just good-looking.</p><div class="dx-tags"><span>UX &amp; UI</span><span>Prototyping</span><span>Design systems</span></div></div>
+        <div class="dx-cap"><h3>Operations</h3><p>We run delivery day to day — scoping, timelines, communication and process — so projects ship on schedule and you always know where things stand.</p><div class="dx-tags"><span>Delivery</span><span>Timelines</span><span>Process</span><span>Support</span></div></div>
+        <div class="dx-cap"><h3>Finance &amp; Analytics</h3><p>We keep the numbers honest and decisions data-backed — costing, reporting and the metrics that keep your project on solid footing.</p><div class="dx-tags"><span>Costing</span><span>Reporting</span><span>Metrics</span></div></div>
+      </div>
+    </div>
   </div>
  </div>
 </section>
@@ -380,6 +385,6 @@
   <i data-lucide="message-circle"></i>
 </a>
 
-<script src="maajnova.js?v=14"></script>
+<script src="maajnova.js?v=15"></script>
 </body>
 </html>

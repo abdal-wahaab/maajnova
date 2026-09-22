@@ -106,6 +106,25 @@
     show(0); play();
   }
 
+  // Maaj Health "What's inside" — desktop side-panel on hover, mobile accordion on tap
+  const mhx = document.getElementById('mhInside');
+  if (mhx) {
+    const items = [].slice.call(mhx.querySelectorAll('.ix-item'));
+    const tabs = [].slice.call(mhx.querySelectorAll('.ix-tab'));
+    const panes = [].slice.call(mhx.querySelectorAll('.ix-pane'));
+    const isDesktop = () => matchMedia('(min-width:821px)').matches;
+    const activate = (i) => {
+      tabs.forEach((t, k) => { t.classList.toggle('is-active', k === i); t.setAttribute('aria-expanded', k === i ? 'true' : 'false'); });
+      panes.forEach((p, k) => p.classList.toggle('is-active', k === i));
+      items.forEach((it, k) => { it.classList.toggle('is-active-item', k === i); it.classList.toggle('is-open', k === i); });
+    };
+    tabs.forEach((t, k) => {
+      t.addEventListener('click', () => activate(k));
+      t.addEventListener('mouseenter', () => { if (isDesktop()) activate(k); });
+    });
+    activate(0);
+  }
+
   // modal
   const modal = document.getElementById('modal');
   if (modal) {

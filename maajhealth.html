@@ -11,7 +11,7 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<link rel="stylesheet" href="maajnova.css?v=58">
+<link rel="stylesheet" href="maajnova.css?v=59">
 <style>
 /* ---- Maaj Health full-screen pinned patient journey ---- */
 .hj-outer{position:relative;height:440vh}
@@ -149,21 +149,70 @@
 
 <!-- FEATURES -->
 <section class="band band-tint">
- <div class="mh-inside-wrap">
-  <div class="mh-inside">
-    <div class="mh-intro" data-reveal>
-      <span class="eyebrow">What's inside</span>
-      <h2>Everything a facility runs on, in one system.</h2>
-      <p>From patient records to pharmacy, Maaj Health brings your entire operation together — so you can focus on what matters most: better care.</p>
-      <div class="mh-line"><span class="arr"><i data-lucide="arrow-right" style="width:16px"></i></span> One system. Total visibility.</div>
+ <div class="wrap sec">
+  <div class="sec-head" data-reveal>
+    <span class="eyebrow">What's inside</span>
+    <h2>Everything a facility runs on, in one system.</h2>
+    <p>From patient records to pharmacy, Maaj Health brings your entire operation together — six modules, one secure platform.</p>
+  </div>
+  <div class="ix" id="mhInside" data-reveal>
+    <div class="ix-list">
+      <div class="ix-item is-open is-active-item">
+        <button class="ix-tab is-active" data-i="0" type="button" aria-expanded="true">
+          <span class="ic"><i data-lucide="folder-heart" style="width:18px"></i></span>
+          <span class="ix-t">Patient Records (EMR)</span>
+          <i class="ix-chev" data-lucide="chevron-down" style="width:18px"></i>
+        </button>
+        <div class="ix-acc"><div class="ix-acc-in"><p>Complete electronic medical records — history, diagnoses, prescriptions and visits, secure and instantly searchable across the whole facility.</p><div class="ix-tags"><span>History</span><span>Diagnoses</span><span>Prescriptions</span></div></div></div>
+      </div>
+      <div class="ix-item">
+        <button class="ix-tab" data-i="1" type="button" aria-expanded="false">
+          <span class="ic"><i data-lucide="receipt" style="width:18px"></i></span>
+          <span class="ix-t">Billing &amp; Claims</span>
+          <i class="ix-chev" data-lucide="chevron-down" style="width:18px"></i>
+        </button>
+        <div class="ix-acc"><div class="ix-acc-in"><p>Automated invoicing, cash and insurance billing, and claim tracking — so revenue stops leaking through the cracks.</p><div class="ix-tags"><span>Invoicing</span><span>Insurance</span><span>Claims</span></div></div></div>
+      </div>
+      <div class="ix-item">
+        <button class="ix-tab" data-i="2" type="button" aria-expanded="false">
+          <span class="ic"><i data-lucide="pill" style="width:18px"></i></span>
+          <span class="ix-t">Pharmacy &amp; Inventory</span>
+          <i class="ix-chev" data-lucide="chevron-down" style="width:18px"></i>
+        </button>
+        <div class="ix-acc"><div class="ix-acc-in"><p>Live drug and supply stock, dispensing, expiry alerts and reorder points — no more running out mid-shift.</p><div class="ix-tags"><span>Stock</span><span>Dispensing</span><span>Reorder</span></div></div></div>
+      </div>
+      <div class="ix-item">
+        <button class="ix-tab" data-i="3" type="button" aria-expanded="false">
+          <span class="ic"><i data-lucide="calendar-check" style="width:18px"></i></span>
+          <span class="ix-t">Appointments &amp; Scheduling</span>
+          <i class="ix-chev" data-lucide="chevron-down" style="width:18px"></i>
+        </button>
+        <div class="ix-acc"><div class="ix-acc-in"><p>Bookings, queues and doctor schedules in one place, with reminders that cut no-shows.</p><div class="ix-tags"><span>Bookings</span><span>Queues</span><span>Reminders</span></div></div></div>
+      </div>
+      <div class="ix-item">
+        <button class="ix-tab" data-i="4" type="button" aria-expanded="false">
+          <span class="ic"><i data-lucide="shield-check" style="width:18px"></i></span>
+          <span class="ix-t">Security &amp; Standards</span>
+          <i class="ix-chev" data-lucide="chevron-down" style="width:18px"></i>
+        </button>
+        <div class="ix-acc"><div class="ix-acc-in"><p>Role-based access, audit trails and encryption throughout — engineered to the standards clinical teams are held to.</p><div class="ix-tags"><span>Roles</span><span>Audit trails</span><span>Encryption</span></div></div></div>
+      </div>
+      <div class="ix-item">
+        <button class="ix-tab" data-i="5" type="button" aria-expanded="false">
+          <span class="ic"><i data-lucide="layers" style="width:18px"></i></span>
+          <span class="ix-t">White-label &amp; Multi-branch</span>
+          <i class="ix-chev" data-lucide="chevron-down" style="width:18px"></i>
+        </button>
+        <div class="ix-acc"><div class="ix-acc-in"><p>Run Maaj Health under your own brand across one site or many, with role-based access for every kind of staff.</p><div class="ix-tags"><span>White-label</span><span>Multi-branch</span><span>Roles</span></div></div></div>
+      </div>
     </div>
-    <div class="mh-cards" data-reveal>
-      <article class="mh-card"><div class="mic"><i data-lucide="folder-heart" style="width:20px"></i></div><h3>Patient Records (EMR)</h3><p>Complete electronic medical records — history, diagnoses, prescriptions and visits, secure and instantly searchable.</p><span class="marr"><i data-lucide="arrow-right" style="width:14px"></i></span></article>
-      <article class="mh-card"><div class="mic"><i data-lucide="receipt" style="width:20px"></i></div><h3>Billing &amp; Claims</h3><p>Automated invoicing, cash and insurance billing, and claim tracking — so revenue stops leaking through the cracks.</p><span class="marr"><i data-lucide="arrow-right" style="width:14px"></i></span></article>
-      <article class="mh-card"><div class="mic"><i data-lucide="pill" style="width:20px"></i></div><h3>Pharmacy &amp; Inventory</h3><p>Live drug and supply stock, dispensing, expiry alerts and reorder points — no more running out mid-shift.</p><span class="marr"><i data-lucide="arrow-right" style="width:14px"></i></span></article>
-      <article class="mh-card"><div class="mic"><i data-lucide="calendar-check" style="width:20px"></i></div><h3>Appointments &amp; Scheduling</h3><p>Bookings, queues and doctor schedules in one place, with reminders that cut no-shows.</p><span class="marr"><i data-lucide="arrow-right" style="width:14px"></i></span></article>
-      <article class="mh-card"><div class="mic"><i data-lucide="shield-check" style="width:20px"></i></div><h3>Security &amp; Standards</h3><p>Role-based access, audit trails and encryption throughout — engineered to the standards clinical teams are held to.</p><span class="marr"><i data-lucide="arrow-right" style="width:14px"></i></span></article>
-      <article class="mh-card"><div class="mic"><i data-lucide="layers" style="width:20px"></i></div><h3>White-label &amp; Multi-branch</h3><p>Run Maaj Health under your own brand across one site or many, with role-based access for every kind of staff.</p><span class="marr"><i data-lucide="arrow-right" style="width:14px"></i></span></article>
+    <div class="ix-stage">
+      <div class="ix-pane is-active" data-i="0"><div class="ix-big"><i data-lucide="folder-heart"></i></div><h3>Patient Records (EMR)</h3><p>Complete electronic medical records — history, diagnoses, prescriptions and visits, secure and instantly searchable across the whole facility.</p><div class="ix-tags"><span>History</span><span>Diagnoses</span><span>Prescriptions</span></div></div>
+      <div class="ix-pane" data-i="1"><div class="ix-big"><i data-lucide="receipt"></i></div><h3>Billing &amp; Claims</h3><p>Automated invoicing, cash and insurance billing, and claim tracking — so revenue stops leaking through the cracks.</p><div class="ix-tags"><span>Invoicing</span><span>Insurance</span><span>Claims</span></div></div>
+      <div class="ix-pane" data-i="2"><div class="ix-big"><i data-lucide="pill"></i></div><h3>Pharmacy &amp; Inventory</h3><p>Live drug and supply stock, dispensing, expiry alerts and reorder points — no more running out mid-shift.</p><div class="ix-tags"><span>Stock</span><span>Dispensing</span><span>Reorder</span></div></div>
+      <div class="ix-pane" data-i="3"><div class="ix-big"><i data-lucide="calendar-check"></i></div><h3>Appointments &amp; Scheduling</h3><p>Bookings, queues and doctor schedules in one place, with reminders that cut no-shows.</p><div class="ix-tags"><span>Bookings</span><span>Queues</span><span>Reminders</span></div></div>
+      <div class="ix-pane" data-i="4"><div class="ix-big"><i data-lucide="shield-check"></i></div><h3>Security &amp; Standards</h3><p>Role-based access, audit trails and encryption throughout — engineered to the standards clinical teams are held to.</p><div class="ix-tags"><span>Roles</span><span>Audit trails</span><span>Encryption</span></div></div>
+      <div class="ix-pane" data-i="5"><div class="ix-big"><i data-lucide="layers"></i></div><h3>White-label &amp; Multi-branch</h3><p>Run Maaj Health under your own brand across one site or many, with role-based access for every kind of staff.</p><div class="ix-tags"><span>White-label</span><span>Multi-branch</span><span>Roles</span></div></div>
     </div>
   </div>
  </div>
@@ -277,7 +326,7 @@
   <i data-lucide="message-circle"></i>
 </a>
 
-<script src="maajnova.js?v=15"></script>
+<script src="maajnova.js?v=16"></script>
 <script>
 (function(){
   var jr = document.getElementById('hmsJourney');

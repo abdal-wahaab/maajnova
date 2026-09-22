@@ -600,11 +600,11 @@ header.scrolled .burger{color:var(--ink)}
   opacity:.14;
   -webkit-mask-image:radial-gradient(circle at 34% 34%,#000,transparent 66%);
   mask-image:radial-gradient(circle at 34% 34%,#000,transparent 66%)}
-.leafy::before{top:-70px;left:-80px}
-.leafy::after{bottom:-80px;right:-90px;transform:scaleX(-1) rotate(8deg)}
+.leafy::before{top:-34px;left:-44px}
+.leafy::after{bottom:-40px;right:-50px;transform:scaleX(-1) rotate(8deg)}
 /* alt corners for variety */
-.leafy.leafy-x::before{top:-70px;left:auto;right:-80px;transform:scaleX(-1)}
-.leafy.leafy-x::after{bottom:-80px;right:auto;left:-90px;transform:none;-webkit-mask-image:radial-gradient(circle at 66% 66%,#000,transparent 66%);mask-image:radial-gradient(circle at 66% 66%,#000,transparent 66%)}
+.leafy.leafy-x::before{top:-34px;left:auto;right:-44px;transform:scaleX(-1)}
+.leafy.leafy-x::after{bottom:-40px;right:auto;left:-50px;transform:none;-webkit-mask-image:radial-gradient(circle at 66% 66%,#000,transparent 66%);mask-image:radial-gradient(circle at 66% 66%,#000,transparent 66%)}
 /* single-leaf variants */
 .leafy.leaf-1::after{display:none}
 @media(max-width:768px){.leafy::before,.leafy::after{width:180px;height:180px;opacity:.10}}

@@ -591,6 +591,25 @@ header.scrolled .burger{color:var(--ink)}
 .po-photo.t4{background:linear-gradient(160deg,#e0f0eb,#d0e9e2)}
 @media(max-width:900px){.poly{flex-wrap:wrap;gap:24px}.po{transform:none!important;width:230px}}
 
+/* ---------- LEAF DECORATION (faded palm leaves, reusable) ---------- */
+.leafy{position:relative;overflow:hidden}
+.leafy>.wrap{position:relative;z-index:1}
+.leafy::before,.leafy::after{content:"";position:absolute;z-index:0;pointer-events:none;
+  width:clamp(220px,26vw,440px);height:clamp(220px,26vw,440px);
+  background:url('https://images.unsplash.com/photo-1689052486733-ea42b4982807?q=80&w=700&auto=format&fit=crop') center/cover;
+  opacity:.14;
+  -webkit-mask-image:radial-gradient(circle at 34% 34%,#000,transparent 66%);
+  mask-image:radial-gradient(circle at 34% 34%,#000,transparent 66%)}
+.leafy::before{top:-70px;left:-80px}
+.leafy::after{bottom:-80px;right:-90px;transform:scaleX(-1) rotate(8deg)}
+/* alt corners for variety */
+.leafy.leafy-x::before{top:-70px;left:auto;right:-80px;transform:scaleX(-1)}
+.leafy.leafy-x::after{bottom:-80px;right:auto;left:-90px;transform:none;-webkit-mask-image:radial-gradient(circle at 66% 66%,#000,transparent 66%);mask-image:radial-gradient(circle at 66% 66%,#000,transparent 66%)}
+/* single-leaf variants */
+.leafy.leaf-1::after{display:none}
+@media(max-width:768px){.leafy::before,.leafy::after{width:180px;height:180px;opacity:.10}}
+@media (prefers-reduced-motion: reduce){}
+
 /* ---------- MAAJ HEALTH · "What's inside" (interactive + mobile accordion) ---------- */
 .ix{display:grid;grid-template-columns:360px 1fr;gap:22px;align-items:start;margin-top:8px;text-align:left}
 .ix-list{display:flex;flex-direction:column;gap:10px}
